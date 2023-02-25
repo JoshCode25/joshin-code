@@ -1,0 +1,15 @@
+html {
+	--primary-dark: rgba(54, 69, 79, 1); /*charcoal*/
+	--primary-light: rgba(251, 255, 241, 1); /*ivory*/
+	--primary-color: rgba(85, 193, 255, 1); /*maya blue*/
+	--secondary-color: rgba(247, 184, 1, 1); /*selective yellow*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
