@@ -11,10 +11,11 @@
 
 <style>
 	header {
-		background: var(--primary-color);
+		background: var(--primary-dark);
 		margin-bottom: 10px;
 	}
 	a {
+		color: var(--primary-color);
 		display: inline-block;
 		padding: 20px;
 		font-size: 2.5rem;
