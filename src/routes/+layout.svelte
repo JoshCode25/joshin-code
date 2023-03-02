@@ -7,3 +7,11 @@
 	<Header />
 	<slot />
 </body>
+
+<style>
+	body {
+		text-align: center;
+		margin: 0 auto;
+		max-width: 100rem;
+	}
+</style>

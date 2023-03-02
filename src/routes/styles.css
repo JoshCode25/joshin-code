@@ -3,6 +3,8 @@ html {
 	--primary-light: rgba(251, 255, 241, 1); /*ivory*/
 	--primary-color: rgba(85, 193, 255, 1); /*maya blue*/
 	--secondary-color: rgba(247, 184, 1, 1); /*selective yellow*/
+
+	font-size: 10px;
 }
 
 * {
@@ -12,4 +14,22 @@ html {
 
 a {
 	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+	font-size: 2rem;
+}
+
+h1 {
+	margin: 10px;
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+p {
+	font-size: 2rem;
 }
