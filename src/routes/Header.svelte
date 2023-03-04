@@ -19,8 +19,9 @@
 	<a
 		href={`/projects/`}
 		on:mouseenter={openDisplayingProjects}
-		on:mouseleave={closeDisplayingProjects}>Projects</a
-	>
+		on:mouseleave={closeDisplayingProjects}
+		>Projects
+	</a>
 	{#if isDisplayingProjects}
 		<ul
 			class="projectSlide"
