@@ -13,5 +13,6 @@
 		text-align: center;
 		margin: 0 auto;
 		max-width: 100rem;
+		background: var(--primary-light);
 	}
 </style>

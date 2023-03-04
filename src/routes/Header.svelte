@@ -2,7 +2,7 @@
 	import { allProjectNames } from '$lib/stores/pageInfo';
 	import { slide } from 'svelte/transition';
 
-	let isDisplayingProjects: boolean = false;
+	let isDisplayingProjects: boolean = true;
 
 	function openDisplayingProjects() {
 		isDisplayingProjects = true;
@@ -44,6 +44,7 @@
 	}
 	a {
 		color: var(--primary-color);
+		background: var(--primary-dark);
 		display: inline-block;
 		padding: 20px;
 		font-size: 2.5rem;
@@ -53,9 +54,10 @@
 		color: var(--secondary-color);
 		cursor: pointer;
 	}
-	/* .projectSlide {
+	.projectSlide {
 		position: absolute;
 		top: 68.8;
-
-	} */
+		width: 200px;
+		text-align: left;
+	}
 </style>
