@@ -7,16 +7,6 @@
 		buttonUrl: '/projects',
 		displayInfo: $allProjectNames
 	};
-
-	let isDisplayingProjects: boolean = true;
-
-	function openDisplayingProjects() {
-		isDisplayingProjects = true;
-	}
-
-	function closeDisplayingProjects() {
-		isDisplayingProjects = false;
-	}
 </script>
 
 <header>
