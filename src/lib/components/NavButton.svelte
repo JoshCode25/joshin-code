@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	import { navigating } from '$app/stores';
+	import type { Readable } from 'svelte/store';
 
 	interface ButtonInfo {
 		buttonName: string;
@@ -17,9 +19,7 @@
 		displayInfo: [{ url: '/', name: 'Home' }]
 	};
 
-	let isDisplayOpen: boolean = true;
-	let clientLeft: number;
-	$: console.log(clientLeft);
+	let isDisplayOpen: boolean = false;
 
 	function openDisplay() {
 		isDisplayOpen = true;
@@ -28,32 +28,32 @@
 	function closeDisplay() {
 		isDisplayOpen = false;
 	}
+
+	$: if ($navigating !== null) {
+		closeDisplay();
+	}
 </script>
 
-<a
-	bind:offsetWidth={clientLeft}
-	href={buttonInfo.buttonUrl}
-	on:mouseenter={openDisplay}
-	on:mouseleave={closeDisplay}
->
-	{buttonInfo.buttonName}
-</a>
-{#if isDisplayOpen}
-	<ul class="projectSlide" on:mouseenter={openDisplay} on:mouseleave={closeDisplay}>
-		{#each buttonInfo.displayInfo as info}
-			<li transition:slide>
-				<a href={info.url}>{info.name}</a>
-			</li>
-		{/each}
-	</ul>
-{/if}
+<div>
+	<a href={buttonInfo.buttonUrl} on:mouseenter={openDisplay} on:mouseleave={closeDisplay}>
+		{buttonInfo.buttonName}
+	</a>
+	{#if isDisplayOpen}
+		<ul on:mouseenter={openDisplay} on:mouseleave={closeDisplay}>
+			{#each buttonInfo.displayInfo as info}
+				<li transition:slide>
+					<a href={info.url}>{info.name}</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+</div>
 
 <style>
 	a {
 		color: var(--primary-color);
-		background: var(--primary-dark);
-		display: inline-block;
 		padding: 20px;
+		display: inline-block;
 		font-size: 2.5rem;
 		font-weight: bold;
 	}
@@ -61,13 +61,13 @@
 		color: var(--secondary-color);
 		cursor: pointer;
 	}
-	li > a {
-		width: 100%;
-	}
-	.projectSlide {
+	ul {
+		background: var(--primary-dark);
 		position: absolute;
-		top: 68.8;
-		width: 200px;
 		text-align: left;
+	}
+	li > a {
+		padding: 1rem;
+		font-size: 2rem;
 	}
 </style>

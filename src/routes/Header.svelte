@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { allProjectNames } from '$lib/stores/pageInfo';
-	import { slide } from 'svelte/transition';
 	import NavButton from '$lib/components/NavButton.svelte';
 
 	const projectsDisplayInfo = {
@@ -29,16 +28,19 @@
 
 <style>
 	header {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
 		background: var(--primary-dark);
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
 	}
 	a {
 		color: var(--primary-color);
 		background: var(--primary-dark);
-		display: inline-block;
 		padding: 20px;
 		font-size: 2.5rem;
 		font-weight: bold;
+		transition: color 0.2s;
 	}
 	a:hover {
 		color: var(--secondary-color);
