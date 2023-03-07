@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { allProjectNames } from '$lib/stores/pageInfo';
+	import Logo from '$lib/components/Logo.svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
 
 	const projectsDisplayInfo = {
@@ -10,16 +11,19 @@
 </script>
 
 <header>
-	<a href={`/about/`}>About</a>
-	<a href={`/`}>Home</a>
-	<NavButton buttonInfo={projectsDisplayInfo} />
-	<a href={`/contact/`}>Contact</a>
+	<Logo />
+	<div class="flexWrapper">
+		<a href={`/about/`}>About</a>
+		<a href={`/`}>Home</a>
+		<NavButton buttonInfo={projectsDisplayInfo} />
+		<a href={`/contact/`}>Contact</a>
+	</div>
 </header>
 
 <style>
 	header {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		gap: 2rem;
 		background: var(--primary-dark);
 		margin-bottom: 1rem;
@@ -35,5 +39,11 @@
 	a:hover {
 		color: var(--secondary-color);
 		cursor: pointer;
+	}
+	.flexWrapper {
+		margin: 0 2rem;
+		display: flex;
+		justify-content: space-around;
+		gap: 2rem;
 	}
 </style>
