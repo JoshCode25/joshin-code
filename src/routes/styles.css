@@ -33,3 +33,24 @@ h3 {
 p {
 	font-size: 2rem;
 }
+
+@keyframes glow {
+	0% {
+		color: white;
+	}
+	20% {
+		color: yellow;
+	}
+	40% {
+		color: orange;
+	}
+	60% {
+		color: red;
+	}
+	80% {
+		color: orange;
+	}
+	100% {
+		color: yellow;
+	}
+}
