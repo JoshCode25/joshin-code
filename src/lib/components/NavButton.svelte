@@ -51,14 +51,14 @@
 
 <style>
 	a {
-		color: var(--primary-color);
+		color: var(--primary-light);
 		padding: 20px;
 		display: inline-block;
 		font-size: 2.5rem;
 		font-weight: bold;
 	}
 	a:hover {
-		color: var(--secondary-color);
+		color: var(--primary-color);
 		cursor: pointer;
 	}
 	ul {

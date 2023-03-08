@@ -1,8 +1,8 @@
 html {
 	--primary-dark: rgba(54, 69, 79, 1); /*charcoal*/
-	--primary-light: rgba(251, 255, 241, 1); /*ivory*/
-	--primary-color: rgba(85, 193, 255, 1); /*maya blue*/
-	--secondary-color: rgba(247, 184, 1, 1); /*selective yellow*/
+	--primary-light: rgba(243, 247, 233, 1); /*ivory*/
+	--primary-color: rgba(204, 164, 59, 1); /*satin sheen gold*/
+	--secondary-color: rgba(126, 163, 204); /*vista blue*/
 
 	font-size: 10px;
 }

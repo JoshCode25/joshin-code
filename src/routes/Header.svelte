@@ -29,7 +29,7 @@
 		margin-bottom: 1rem;
 	}
 	a {
-		color: var(--primary-color);
+		color: var(--primary-light);
 		background: var(--primary-dark);
 		padding: 20px;
 		font-size: 2.5rem;
@@ -37,7 +37,7 @@
 		transition: color 0.2s;
 	}
 	a:hover {
-		color: var(--secondary-color);
+		color: var(--primary-color);
 		cursor: pointer;
 	}
 	.flexWrapper {
