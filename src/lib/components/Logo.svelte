@@ -8,12 +8,14 @@
 	$: displayName = displayList[displayNumber];
 
 	function toggleDisplayName(): void {
-		let displayAdvance: number = Math.floor(Math.random() * maxDisplayAdvance);
+		let displayAdvance: number = Math.floor(Math.random() * maxDisplayAdvance + 1);
+		console.log(displayNumber, displayAdvance);
 		if (displayNumber + displayAdvance > displayList.length - 1) {
 			displayNumber = displayNumber + displayAdvance - displayList.length;
 		} else {
 			displayNumber = displayNumber + displayAdvance;
 		}
+		console.log(displayNumber);
 	}
 </script>
 
@@ -45,6 +47,7 @@
 		animation-iteration-count: infinite;
 	}
 	.inlineBlock {
+		margin: 1rem 0;
 		display: inline-block;
 	}
 </style>
