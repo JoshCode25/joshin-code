@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	const displayList: Array<string> = ['josh', 'figures', 'trees', 'land', 'flocks', 'cities'];
 	let displayNumber = 0;
@@ -24,7 +24,7 @@
 	<h4>
 		<span class="glow">{'<'}</span>
 		{#key displayName}
-			<span class="inlineBlock" in:slide>{displayName}</span>
+			<span class="inlineBlock" in:fly={{ y: 20 }}>{displayName}</span>
 		{/key}
 		<span class="glow">{'/>'}</span>
 	</h4>
@@ -47,7 +47,6 @@
 		animation-iteration-count: infinite;
 	}
 	.inlineBlock {
-		margin: 1rem 0;
 		display: inline-block;
 	}
 </style>
