@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { navigating } from '$app/stores';
-	import type { Readable } from 'svelte/store';
 
 	interface ButtonInfo {
 		buttonName: string;
@@ -34,7 +33,7 @@
 	}
 </script>
 
-<div>
+<div class="navWrapper">
 	<a href={buttonInfo.buttonUrl} on:mouseenter={openDisplay} on:mouseleave={closeDisplay}>
 		{buttonInfo.buttonName}
 	</a>
@@ -50,17 +49,6 @@
 </div>
 
 <style>
-	a {
-		color: var(--primary-light);
-		padding: 20px;
-		display: inline-block;
-		font-size: 2.5rem;
-		font-weight: bold;
-	}
-	a:hover {
-		color: var(--primary-color);
-		cursor: pointer;
-	}
 	ul {
 		background: var(--primary-dark);
 		position: absolute;

@@ -12,7 +12,7 @@
 
 <header>
 	<Logo />
-	<div class="flexWrapper">
+	<div class="flexWrapper navWrapper">
 		<a href={`/about/`}>About</a>
 		<a href={`/`}>Home</a>
 		<NavButton buttonInfo={projectsDisplayInfo} />
@@ -28,18 +28,7 @@
 		background: var(--primary-dark);
 		margin-bottom: 1rem;
 	}
-	a {
-		color: var(--primary-light);
-		background: var(--primary-dark);
-		padding: 20px;
-		font-size: 2.5rem;
-		font-weight: bold;
-		transition: color 0.2s;
-	}
-	a:hover {
-		color: var(--primary-color);
-		cursor: pointer;
-	}
+
 	.flexWrapper {
 		margin: 0 2rem;
 		display: flex;
