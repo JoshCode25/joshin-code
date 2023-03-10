@@ -1,12 +1,12 @@
 <script lang="ts">
 </script>
 
-<h1>This is my sample site!</h1>
-<h3>I'm trying some new features:</h3>
-
-<ul>
-	<li>Typescript</li>
-	<li>Server & Database Interactions</li>
-	<li>Playwright Testing</li>
-	<li>Vite Testing</li>
-</ul>
+<p>
+	Hey there! I'm a Developer based in Longview, Texas with a fascination for wit and strategy. I
+	love to collaborate with others to help develop their vision and online presence with a clever
+	site or experience.
+</p>
+<p>
+	Feel free to <a href="/contact">reach out</a> or spend some time looking around, but watch out for
+	...
+</p>
